@@ -1,0 +1,57 @@
+
+*{
+    font-family: Montserrat;
+}
+body{
+    background-color: #eeeeee;
+    
+    padding: 0;
+}
+.container{
+    max-width: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.usersay{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.1rem;
+    background-color: #dddddd;
+    padding: 1rem 3rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    h5{
+        margin: 0;  
+        font-weight: 300px;
+
+    }
+    p{
+        margin: 1px;
+        font-weight: 800;
+    }
+}
+.button{
+    
+    color:#1d094c;
+    padding: 1rem 2rem;
+    border:none;
+    border-radius: 20px;
+    background: #eeeeee;
+    box-shadow:  30px 30px 60px #cacaca,
+                 -30px -30px 60px #ffffff;
+    transition: all 0.5s ease;
+
+}
+.button:hover{
+    background: #eeeeee;
+box-shadow: inset 30px 30px 60px #cacaca,
+            inset -30px -30px 60px #ffffff;
+            transition: all 0.5s ease;
+}

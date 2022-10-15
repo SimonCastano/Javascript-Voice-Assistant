@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <title>Asistente Virtual El Taller De TD</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AAssitente virtual</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script src="asistente.js"></script>
 </head>
@@ -11,8 +12,13 @@
 <body>
     <div class="container">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_oolltm56.json"  background="transparent"  speed="1"  style="width: 40%; height: 40%;" hover loop  autoplay></lottie-player>
+<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_oolltm56.json"  background="transparent"  speed="1"  style="width: 40%; height: 40%;"  loop  autoplay></lottie-player>
     <button onclick="alerta()" id="button" class="button" style="text-align: center;">Touch me</button>
+
+    <div class="usersay">
+        <h5>You say: </h5>
+        <p id="say-user">waiting...</p>
+    </div>
     </div>
     
 </body>

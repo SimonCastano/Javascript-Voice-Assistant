@@ -54,7 +54,7 @@ if (annyang) {
     },
     'open app': function () {
       utter.text = 'get out of here';
-      RunFile();
+      RunFile()
 
       //Setea la voz que queremos usar en base a nuestra lista.
       utter.voice = voices[1];
@@ -101,9 +101,14 @@ if (annyang) {
 
   //Esto nos sirve para ver que escucha el programa en tiempo real.
   
-    annyang.addCallback('result', function(phrases) {
-      console.log("I think the user said: ", phrases[0]);
-      console.log("But then again, it could be any of the following: ", phrases);
+  
+  annyang.addCallback('result', function(phrases) {
+    console.log("I think the user said: ", phrases[0]);
+    console.log("But then again, it could be any of the following: ", phrases);
+    
+    var userSaid =  document.getElementById('say-user');
+    userSaid.innerHTML = phrases[0]; 
+      
        });
        
 
