@@ -23,10 +23,11 @@ body{
     align-items: flex-start;
     flex-direction: column;
     gap: 0.1rem;
-    background-color: #dddddd;
+    background-color: #e2e2e2;
     padding: 1rem 3rem;
     margin: 1rem;
     border-radius: 1rem;
+    color: #606060;
     h5{
         margin: 0;  
         font-weight: 300px;
@@ -38,8 +39,9 @@ body{
     }
 }
 .button{
-    
-    color:#1d094c;
+    font-weight: 700;
+    font-size: 2rem;
+    color:#625188;
     padding: 1rem 2rem;
     border:none;
     border-radius: 20px;
