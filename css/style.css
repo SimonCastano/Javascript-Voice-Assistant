@@ -25,7 +25,7 @@ body {
           align-items: center;
 }
 
-.usersay {
+.userSays {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,11 +47,11 @@ body {
   border-radius: 1rem;
   color: #606060;
 }
-.usersay h5 {
+.userSays h5 {
   margin: 0;
   font-weight: 300px;
 }
-.usersay p {
+.userSays p {
   margin: 1px;
   font-weight: 800;
 }
@@ -77,3 +77,92 @@ body {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+
+/* start new code */
+.switchBtn {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  height: 50px;
+}
+
+.switchBtn input {
+  display: none;
+}
+
+.switchBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  color: #00a2ff;
+}
+
+.off {
+  position: relative;
+  right: 40px;
+}
+
+.on {
+  position: relative;
+  left: 130px;
+}
+
+.slide {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eeeeee;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #eeeeee;
+  -webkit-box-shadow: inset 1px 1px 1px #cacaca, inset -1px -1px 1px #ffffff, 1px 1px 1px #cacaca, -1px -1px 1px #ffffff;
+          box-shadow: inset 1px 1px 1px #cacaca, inset -1px -1px 1px #ffffff, 1px 1px 1px #cacaca, -1px -1px 1px #ffffff;
+}
+
+.slide:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  bottom: 3px;
+  background-color: #eeeeee;
+  -webkit-box-shadow: 1px 1px 1px #cacaca, -1px -1px 1px #ffffff;
+          box-shadow: 1px 1px 1px #cacaca, -1px -1px 1px #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slide {
+  padding-left: 40px;
+  background-color: #29a6db;
+}
+
+input:focus + .slide {
+  -webkit-box-shadow: 0 0 1px #01aeed;
+          box-shadow: 0 0 1px #01aeed;
+}
+
+input:checked + .slide:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: #29a6db;
+  -webkit-box-shadow: 1px 1px 1px #196586, -1px -1px 1px #39e7ff;
+          box-shadow: 1px 1px 1px #196586, -1px -1px 1px #39e7ff;
+  left: 82px;
+}
+
+.slide.round {
+  border-radius: 34px;
+}
+
+.slide.round:before {
+  border-radius: 50%;
+}
+
+/* end of new code */
