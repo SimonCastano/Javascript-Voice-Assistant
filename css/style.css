@@ -1,9 +1,26 @@
+:root {
+  --color-background: #f4f4f4;
+  --color-background2: #eeeeee;
+  --color-text: #1c1e35;
+  --color-primary: #0583cd;
+  --theme: "light";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #333333;
+    --color-background2: #2e2e2e;
+    --color-text: #ececec;
+    --color-primary: #0d9ff4;
+    --theme: "dark";
+  }
+}
 * {
   font-family: Montserrat;
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: var(--color-background);
   padding: 0;
 }
 
@@ -41,7 +58,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.1rem;
-  background-color: #e2e2e2;
+  background-color: var(--color-background);
   padding: 1rem 3rem;
   margin: 1rem;
   border-radius: 1rem;
@@ -59,21 +76,21 @@ body {
 .button {
   font-weight: 700;
   font-size: 2rem;
-  color: #625188;
+  color: var(--color-text);
   padding: 1rem 2rem;
   border: none;
   border-radius: 20px;
-  background: #eeeeee;
-  -webkit-box-shadow: 30px 30px 60px #cacaca, -30px -30px 60px #ffffff;
-          box-shadow: 30px 30px 60px #cacaca, -30px -30px 60px #ffffff;
+  background: var(--color-background);
+  -webkit-box-shadow: 30px 30px 60px #cacaca, -30px -30px 60px var(--color-background);
+          box-shadow: 30px 30px 60px #cacaca, -30px -30px 60px var(--color-background);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 .button:hover {
-  background: #eeeeee;
-  -webkit-box-shadow: inset 30px 30px 60px #cacaca, inset -30px -30px 60px #ffffff;
-          box-shadow: inset 30px 30px 60px #cacaca, inset -30px -30px 60px #ffffff;
+  background: var(--color-background);
+  -webkit-box-shadow: inset 30px 30px 60px #cacaca, inset -30px -30px 60px var(--color-background);
+          box-shadow: inset 30px 30px 60px #cacaca, inset -30px -30px 60px var(--color-background);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -95,7 +112,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-weight: bold;
-  color: #00a2ff;
+  color: var(--color-primary);
 }
 
 .off {
@@ -115,14 +132,14 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #eeeeee;
+  background-color: var(--color-background);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   padding: 8px;
-  color: #fff;
-  border: 2px solid #eeeeee;
-  -webkit-box-shadow: inset 1px 1px 1px #cacaca, inset -1px -1px 1px #ffffff, 1px 1px 1px #cacaca, -1px -1px 1px #ffffff;
-          box-shadow: inset 1px 1px 1px #cacaca, inset -1px -1px 1px #ffffff, 1px 1px 1px #cacaca, -1px -1px 1px #ffffff;
+  color: var(--color-background);
+  border: 2px solid var(--color-background);
+  -webkit-box-shadow: inset 1px 1px 1px #cacaca, inset -1px -1px 1px var(--color-background) 2, 1px 1px 1px #cacaca, -1px -1px 1px var(--color-background);
+          box-shadow: inset 1px 1px 1px #cacaca, inset -1px -1px 1px var(--color-background) 2, 1px 1px 1px #cacaca, -1px -1px 1px var(--color-background);
 }
 
 .slide:before {
@@ -131,27 +148,27 @@ body {
   height: 40px;
   width: 40px;
   bottom: 3px;
-  background-color: #eeeeee;
-  -webkit-box-shadow: 1px 1px 1px #cacaca, -1px -1px 1px #ffffff;
-          box-shadow: 1px 1px 1px #cacaca, -1px -1px 1px #ffffff;
+  background-color: var(--color-background);
+  -webkit-box-shadow: 1px 1px 1px #cacaca, -1px -1px 1px var(--color-background);
+          box-shadow: 1px 1px 1px #cacaca, -1px -1px 1px var(--color-background);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slide {
   padding-left: 40px;
-  background-color: #29a6db;
+  background-color: var(--color-primary);
 }
 
 input:focus + .slide {
-  -webkit-box-shadow: 0 0 1px #01aeed;
-          box-shadow: 0 0 1px #01aeed;
+  -webkit-box-shadow: 0 0 1px var(--color-primary);
+          box-shadow: 0 0 1px var(--color-primary);
 }
 
 input:checked + .slide:before {
   -webkit-transform: translateX(26px);
   transform: translateX(26px);
-  background-color: #29a6db;
+  background-color: var(--color-primary);
   -webkit-box-shadow: 1px 1px 1px #196586, -1px -1px 1px #39e7ff;
           box-shadow: 1px 1px 1px #196586, -1px -1px 1px #39e7ff;
   left: 82px;

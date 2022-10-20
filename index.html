@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>A.L.F.R.E.D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-    <title>AAssitente virtual</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
+  <body>
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <div class="container">
-        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_oolltm56.json"  background="transparent"  speed="1"  style="width: 30%; height: 30%;"  loop  autoplay></lottie-player>
-        <label class="switchBtn">
-            <input type="checkbox" id="startAssistant" name="startCheckbox">
-            <div class="slide round"></div>
-            <p class="off">OFF</p>
-            <p class="on">ON</p>
-        </label>
-        <div class="userSays">
-        <h5>You say: </h5>
+      <lottie-player
+        src="https://assets7.lottiefiles.com/packages/lf20_oolltm56.json"
+        background="transparent"
+        speed="1"
+        style="width: 30%; height: 30%"
+        loop
+        autoplay
+      ></lottie-player>
+      <label class="switchBtn">
+        <input type="checkbox" id="startAssistant" name="startCheckbox" />
+        <div class="slide round"></div>
+        <p class="off">OFF</p>
+        <p class="on">ON</p>
+      </label>
+      <div class="userSays">
+        <h5>You say:</h5>
         <p id="userIsSaying">waiting...</p>
-    </div>
+      </div>
     </div>
     <script src="asistente.js"></script>
-</body>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.js"></script>
+  </body>
 </html>
