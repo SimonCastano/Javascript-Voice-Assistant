@@ -99,7 +99,7 @@ startAssistant.addEventListener('click', function () {
     // Sumamos todos los comandos a annyang.
     annyang.addCommands(commands);
     // Establecer el idioma
-    // annyang.setLanguage("es-MX");
+    // annyang.setLanguage("es-US");
     // Annyang comienza a escuchar.
     annyang.start();
   }

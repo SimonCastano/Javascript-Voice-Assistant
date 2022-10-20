@@ -1,6 +1,5 @@
 @import 'variables';
 @import 'globales';
-@import 'color-preference';
 
 .container {
   max-width: 100%;
@@ -22,7 +21,7 @@
   padding: 1rem 3rem;
   margin: 1rem;
   border-radius: 1rem;
-  color: #606060;
+  color: getColor(text);
   h5 {
     margin: 0;
     font-weight: 300px;
@@ -31,22 +30,6 @@
     margin: 1px;
     font-weight: 800;
   }
-}
-.button {
-  font-weight: 700;
-  font-size: 2rem;
-  color: getColor(text);
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 20px;
-  background: getColor(background);
-  box-shadow: 30px 30px 60px #cacaca, -30px -30px 60px getColor(background);
-  transition: all 0.5s ease;
-}
-.button:hover {
-  background: getColor(background);
-  box-shadow: inset 30px 30px 60px #cacaca, inset -30px -30px 60px getColor(background);
-  transition: all 0.5s ease;
 }
 /* start new code */
 .switchBtn {
@@ -84,17 +67,17 @@
   transition: 0.4s;
   padding: 8px;
   color: getColor(background);
-  border: 2px solid getColor(background);
-  box-shadow: inset 1px 1px 1px #cacaca, inset -1px -1px 1px getColor(background) 2, 1px 1px 1px #cacaca, -1px -1px 1px getColor(background);
+  border: 3px solid getColor(background);
+  box-shadow: inset 1px 1px 1px getColor(lighting), inset -1px -1px 1px getColor(shadow), 1px 1px 1px getColor(lighting), -1px -1px 1px getColor(shadow);
 }
 .slide:before {
   position: absolute;
   content: '';
-  height: 40px;
-  width: 40px;
-  bottom: 3px;
+  height: 35px;
+  width: 35px;
+  bottom: 4px;
   background-color: getColor(background);
-  box-shadow: 1px 1px 1px #cacaca, -1px -1px 1px getColor(background);
+  box-shadow: 1px 1px 1px getColor(lighting), -1px -1px 1px getColor(shadow);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -111,7 +94,7 @@ input:checked + .slide:before {
   transform: translateX(26px);
   background-color: getColor(primary);
   box-shadow: 1px 1px 1px #196586, -1px -1px 1px #39e7ff;
-  left: 82px;
+  left: 85px;
 }
 .slide.round {
   border-radius: 34px;

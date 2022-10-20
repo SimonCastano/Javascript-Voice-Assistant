@@ -1,17 +1,23 @@
 :root {
-  --color-background: #f4f4f4;
-  --color-background2: #eeeeee;
+  --color-background: #e0e0e0;
+  --color-background2: #cacaca;
   --color-text: #1c1e35;
   --color-primary: #0583cd;
+  --color-kevin: turquoise;
+  --color-shadow: #c4c4c4;
+  --color-lighting: #efeeee;
   --theme: "light";
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #333333;
+    --color-shadow: #202020;
+    --color-lighting: #515151;
     --color-background2: #2e2e2e;
     --color-text: #ececec;
     --color-primary: #0d9ff4;
+    --color-kevin: rgb(64, 160, 224);
     --theme: "dark";
   }
 }
@@ -62,7 +68,7 @@ body {
   padding: 1rem 3rem;
   margin: 1rem;
   border-radius: 1rem;
-  color: #606060;
+  color: var(--color-text);
 }
 .userSays h5 {
   margin: 0;
@@ -71,28 +77,6 @@ body {
 .userSays p {
   margin: 1px;
   font-weight: 800;
-}
-
-.button {
-  font-weight: 700;
-  font-size: 2rem;
-  color: var(--color-text);
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 20px;
-  background: var(--color-background);
-  -webkit-box-shadow: 30px 30px 60px #cacaca, -30px -30px 60px var(--color-background);
-          box-shadow: 30px 30px 60px #cacaca, -30px -30px 60px var(--color-background);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.button:hover {
-  background: var(--color-background);
-  -webkit-box-shadow: inset 30px 30px 60px #cacaca, inset -30px -30px 60px var(--color-background);
-          box-shadow: inset 30px 30px 60px #cacaca, inset -30px -30px 60px var(--color-background);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 /* start new code */
@@ -137,20 +121,20 @@ body {
   transition: 0.4s;
   padding: 8px;
   color: var(--color-background);
-  border: 2px solid var(--color-background);
-  -webkit-box-shadow: inset 1px 1px 1px #cacaca, inset -1px -1px 1px var(--color-background) 2, 1px 1px 1px #cacaca, -1px -1px 1px var(--color-background);
-          box-shadow: inset 1px 1px 1px #cacaca, inset -1px -1px 1px var(--color-background) 2, 1px 1px 1px #cacaca, -1px -1px 1px var(--color-background);
+  border: 3px solid var(--color-background);
+  -webkit-box-shadow: inset 1px 1px 1px var(--color-lighting), inset -1px -1px 1px var(--color-shadow), 1px 1px 1px var(--color-lighting), -1px -1px 1px var(--color-shadow);
+          box-shadow: inset 1px 1px 1px var(--color-lighting), inset -1px -1px 1px var(--color-shadow), 1px 1px 1px var(--color-lighting), -1px -1px 1px var(--color-shadow);
 }
 
 .slide:before {
   position: absolute;
   content: "";
-  height: 40px;
-  width: 40px;
-  bottom: 3px;
+  height: 35px;
+  width: 35px;
+  bottom: 4px;
   background-color: var(--color-background);
-  -webkit-box-shadow: 1px 1px 1px #cacaca, -1px -1px 1px var(--color-background);
-          box-shadow: 1px 1px 1px #cacaca, -1px -1px 1px var(--color-background);
+  -webkit-box-shadow: 1px 1px 1px var(--color-lighting), -1px -1px 1px var(--color-shadow);
+          box-shadow: 1px 1px 1px var(--color-lighting), -1px -1px 1px var(--color-shadow);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -171,7 +155,7 @@ input:checked + .slide:before {
   background-color: var(--color-primary);
   -webkit-box-shadow: 1px 1px 1px #196586, -1px -1px 1px #39e7ff;
           box-shadow: 1px 1px 1px #196586, -1px -1px 1px #39e7ff;
-  left: 82px;
+  left: 85px;
 }
 
 .slide.round {

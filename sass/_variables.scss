@@ -1,15 +1,21 @@
 $colors: (
-  background: #f4f4f4,
-  background2: #eeeeee,
+  background: #e0e0e0,
+  background2: #cacaca,
   text: #1c1e35,
   primary: #0583cd,
+  kevin: turquoise,
+  shadow: #c4c4c4,
+  lighting: #efeeee,
 );
 //dark theme
 $colors-dark: (
   background: #333333,
+  shadow: #202020,
+  lighting: #515151,
   background2: #2e2e2e,
   text: #ececec,
   primary: #0d9ff4,
+  kevin: rgb(64, 160, 224)
 );
 //converting scss variable into css variable
 :root {
